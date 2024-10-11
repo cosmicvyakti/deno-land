@@ -1,13 +1,5 @@
 import { Application } from "jsr:@oak/oak/application";
 import { Router } from "jsr:@oak/oak/router";
-import { Middleware } from "@oak/oak/middleware";
-import { Context } from "@oak/oak/context";
-
-
-
-
-
-
 
 const router = new Router();
 router.get("/", (ctx) => {
@@ -29,9 +21,6 @@ router.get("/", (ctx) => {
 });
 
 const app = new Application();
-
-
-
 
 app.use(router.routes());
 app.use(router.allowedMethods());
